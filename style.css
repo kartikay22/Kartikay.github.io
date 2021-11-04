@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:cursive;
+}
+
+
+.html{
+    padding: 0%;
+    width: 0%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    background: rgb(65, 16, 110);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40vh 0;
+    width: 1100px;
+}
+.container .card
+{
+    position: relative;
+    width:  80%;
+    height: 90%;
+    background: rgb(37, 209, 157);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    box-shadow: 0 20px 50px rgb(17, 81, 133);
+    overflow: hidden;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.container:hover .card
+{
+    opacity: 1;
+}
+.container .card:hover
+{
+    background: rgb(22, 143, 241);
+    opacity: 1;
+}
+.container .card::before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 50%;
+    bottom: 2px;
+    background: rgb(87, 129, 219);
+    pointer-events: none;
+}
+.container .card .content
+{
+    padding: 30px;
+    justify-content: left;
+    justify-content: start;
+}
+.container .card .content h2
+{
+    position: absolute;
+    right: 30px;
+    font-size: 4em;
+    font-weight: 800;
+    color: cyan;
+    z-index: 0.1;
+    opacity: 0.1;
+    transition: 0.5s;
+
+}
+.container .card:hover .content h2
+{
+    opacity: 1;
+    transform: translateY(-45px);
+    color: lightcoral;
+}
+.container .card .content h3
+{
+    position: relative;
+    font-size: 3em;
+    color: red;
+    z-index: 1;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    transform: 0.5s;
+    margin: 5px;
+}
+.container .card .content p
+{
+    position: relative;
+    font-size: 1em;
+    color:mediumblue;
+    z-index: 1;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    font-weight: 300;
+    transform: 0.5s;
+    text-align: left;
+    margin: 2px;
+    padding: 10px;
+    justify-content: left;
+    align-items: flex-start;
+}
+.container .card:hover .content h3,
+.container .card:hover .content p
+{
+    opacity: 1;
+
+
+}
+.container .card .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 17px;
+    border: 2px solid rgb(170, 64, 212);
+    fill: oldlace;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    align-items: center;
+    letter-spacing: 2px;
+    color:aqua ;
+    -webkit-box-reflect: below 0px linear-gradient(transparent,#0002 );
+    transition: 0.5s;
+    margin: 15px;
+    background: rgb(250, 79, 144);
+    text-transform: uppercase;
+}
+.container .card .content a:hover
+{
+    color: skyblue;
+    margin: 20;
+    
+}
+
+.container .card .content a:nth-child(80deg)
+.container .card .content a::before
+{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20vh;
+    height: 20vh;
+    background-color: springgreen;
+    box-shadow: 5px -8px 0 sandybrown,
+                5px 8px 0 sandybrown;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;   
+}
+.container .card .content a:hover:before
+{
+    width: 60%;
+    height: 100%;
+    left: -20%;
+    box-shadow: 5px 0 0 sandybrown,
+    5px 0 0 sandybrown;
+    transition-delay: 0s,0s,0.5s,1
+}
+.container .card span
+{
+    transition: 0.5s;
+    opacity: 0;
+}
+.container .card:hover span
+{
+    opacity: 3;
+}
+.container .card span:nth-child(1)
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, #9c28ca);
+    animation: animate1 2s linear infinite;
+}
+@keyframes animate1
+{
+    0%
+    {
+        transform: translatex(-100%);
+    }
+    100%
+    {
+        transform: translatex(100%);
+    }
+}
+.container .card span:nth-child(2)
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(to bottom, transparent, #ff17b2);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate2
+{
+    0%
+    {
+        transform: translateY(-100%);
+    }
+    100%
+    {
+        transform: translateY(100%);
+    }
+}
+.container .card span:nth-child(3)
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to left, transparent, #9c28ca);
+    animation: animate3 2s linear infinite;
+}
+@keyframes animate3
+{
+    0%
+    {
+        transform: translatex(100%);
+    }
+    100%
+    {
+        transform: translatex(-100%);
+    }
+}
+.container .card span:nth-child(4)
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(to top, transparent, #ff17b2);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate4
+{
+    0%
+    {
+        transform: translateY(100%);
+    }
+    100%
+    {
+        transform: translateY(-100%);
+    }
+}
+
+.container .card .content .btn
+{
+    position: relative;
+    width: 155px;
+    height: 50px;
+    margin: 100px;
+}
+.container .card .content .btn a
+{
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgb(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+    border-bottom:  1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 30px;
+    color: #fff;
+    z-index: 1;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+}
+.container .card .content .btn:hover a
+{
+    letter-spacing: 3PX;
+}
+.container .card .content .btn a::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translate(0);
+    transition: 0.5s;
+}
+.container .card .content .btn:hover a::before
+{
+    transform: skewX(45deg) translateX(200%);
+}
+.container .card .content .btn::before
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.container .card .content .btn:hover::before
+{
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.5s;
+
+}
+
+.container .card .content .btn::after
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.container .card .content .btn:hover::after
+{
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.5s;
+    
+}
+.container .card .content .btn:nth-child(1):before,
+.container .card .content .btn:nth-child(1):after 
+{
+    background: #2bd2ff;
+    box-shadow: 0 0 5px #2bd2ff,
+    0 0 15px #2bd2ff,
+    0 0 30px #2bd2ff,
+    0 0 6px #2bd2ff;
+}
+
+.container .card .content .btn:nth-child(2):before,
+.container .card .content .btn:nth-child(2):after 
+{
+    background: #ff1f71;
+    box-shadow: 0 0 5px #ff1f71,
+    0 0 15px #ff1f71,
+    0 0 30px #ff1f71,
+    0 0 6px #ff1f71;
+}
