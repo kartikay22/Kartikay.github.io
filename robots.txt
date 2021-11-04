@@ -1,0 +1,20 @@
+#hmm this is for Crawlers and spiders
+
+User-agent: googlebot
+User-agent: applebot
+User-agent: duckduckbot
+User-agent:
+User-agent: Googlebot-Image
+User-agent: Googlebot-Mobile
+User-agent: Googlebot-News
+User-agent: Googlebot-Video
+User-agent: AdsBot-Google
+Disallow: /style/
+Disallow: /particles/
+Disallow: /particles/
+Disallow: /app/
+disallow: /LICENSE/
+allow: /index/
+
+
+sitemap: http://Kartikay.me/
